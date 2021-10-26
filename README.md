@@ -13,7 +13,7 @@
 ## Step Two: Add the dependency below to your app level build.gradle file
 
 <pre><code>dependencies {
-	        implementation 'com.github.SharifMrCreed:easypay-library:1.0.2'
+	        implementation 'com.github.SharifMrCreed:easypay-library:1.0.4'
 	}
 </code></pre>
 
