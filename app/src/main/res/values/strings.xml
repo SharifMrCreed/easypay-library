@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EasyPayApi Example</string>
+    <string name="phone_number">Enter phone number</string>
+    <string name="reason_for_payment">Reason for payment</string>
+    <string name="client_id">Client id</string>
+    <string name="client_secret">Client secret</string>
+    <string name="pay">pay</string>
+    <string name="ug_code">256</string>
+    <string name="amount">Amount</string>
+</resources>
