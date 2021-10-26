@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         int amount = Integer.parseInt(etAmount.getText().toString());
 
         new EasyPayApiConnection().amount(amount)
-                .clientId(clientId)
-                .secret(secret)
+                .clientId("bde6d8deef4a248f")
+                .secret("1f3657f0012f0bd8")
                 .reason(reason)
                 .orderId(String.valueOf(System.currentTimeMillis()))
                 .phoneNumber(phoneNumber)
@@ -69,14 +69,14 @@ public class MainActivity extends AppCompatActivity {
             tlAmount.setError("Amount must be above 500");
             return false;
         }
-        if (TextUtils.isEmpty(secret)){
-            tlSecret.setError("your secret is required");
-            return false;
-        }
-        if (TextUtils.isEmpty(clientId)){
-            tlClientId.setError("your client id is required");
-            return false;
-        }
+//        if (TextUtils.isEmpty(secret)){
+//            tlSecret.setError("your secret is required");
+//            return false;
+//        }
+//        if (TextUtils.isEmpty(clientId)){
+//            tlClientId.setError("your client id is required");
+//            return false;
+//        }
         if (TextUtils.isEmpty(reason)){
             tlReason.setError("add a reason");
             return false;
@@ -84,12 +84,11 @@ public class MainActivity extends AppCompatActivity {
         int amount = Integer.parseInt(s);
         if (TextUtils.isEmpty(pPhoneNumber) && !pPhoneNumber.contains(getResources().getString(R.string.ug_code))) {
             etPhoneNumber.setText(R.string.ug_code);
-            tlPhoneNumber.setError("country code +256 is required");
+            tlPhoneNumber.setError("country code 256 is required");
             return false;
         }
 
-        if (pPhoneNumber.length() != 13) {
-            etPhoneNumber.setText(R.string.ug_code);
+        if (pPhoneNumber.length() != 12) {
             tlPhoneNumber.setError("Phone Number is missing some digits");
             return false;
         }
